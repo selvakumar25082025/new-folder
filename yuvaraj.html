@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathemathics</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: paleturquoise;
+
+        }
+        h1{
+            font-size: 40px;
+            color: blue;
+            text-align: center;
+            background-color: limegreen;
+        }
+        li{
+            font-size: 25px;
+            font-weight: bold;
+            color: brown;
+        }
+        p{
+            font-weight: bold;
+            font-weight: 25px;
+            font-size: 25px;
+            color: solid black;
+            text-transform:capitalize ;
+            font-style: italic;
+        }
+        div{
+            background-color: lightgrey;
+            padding: 10px;
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+        img{
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Module 1:Matrics and Determinants </h1>
+    <h2>Why this course</h2>
+    <p>People study mathematics because it develops critical problem-solving and analytical skills applicable to many careers in fields like finance, engineering, and technology.<br><br>
+    <strong>Develops Key Skills</strong><br><br>
+<strong>Problem-Solving:</strong>Studying math trains you to break down complex problems, identify patterns, and find logical solutions.<br>
+<strong>Critical and Analytical Thinking:</strong> Mathematics enhances your ability to think critically, organize thoughts, and make informed decisions.<br><br>
+<strong>Career Opportunities</strong><br><br>
+<strong>High-Demand Fields:</strong> Graduates with math degrees are highly sought after in finance, banking, engineering, data science, and technology.<br>
+<strong>High Earning Potential:</strong> Mathematicians and statisticians often earn high salaries, with top earners making significantly more than the average.    </p>
+    <ul>
+        <li>What is the relation between Mathematics and Computer Science?</li>
+        <p>Mathematics is foundational to Computer Science, providing the logical reasoning, formal tools, and theoretical framework to design, analyze, and optimize algorithms and systems. Key mathematical areas like discrete mathematics, logic, calculus, linear algebra, and probability are essential for algorithm design, data analysis, artificial intelligence, and cybersecurity, demonstrating that computer science is deeply rooted in mathematical principles.  
+<br></p>
+        <li>What is Engineering Mathematics?</li>
+        <p>Engineering Mathematics is a branch of applied mathematics that provides engineers with the essential mathematical tools and techniques to model, analyze, and solve complex real-world problems encountered in various engineering fields. It focuses on translating theoretical mathematical concepts into practical applications by covering topics like linear algebra, calculus, differential equations, complex variables, probability and statistics, and numerical methods. 
+</p>
+
+    </ul>
+    <br>
+    <h2>Introduction to Matrices</h2>
+    <p>A matrix is a rectangular arrangement of numbers, symbols, or expressions organized into rows (horizontal lines) and columns (vertical lines). The dimensions of a matrix are described by its number of rows and columns (e.g., an \(m\times n\) matrix has \(m\) rows and \(n\) columns). Matrices serve as a concise way to organize and represent data, with applications in various fields, including solving systems of linear equations, computer graphics, physics, and economics</p>
+    <ul>
+        <li>Applications of Matrices in CS Engineers</li>
+        <ol>
+            <li>Computer Graphics and Image Processing</li>
+            <p> Matrix Use:<br>
+
+Matrices are used to perform transformations like rotation, scaling, and translation on 2D or 3D images and models.<br>
+Each pixel in an image can be represented as a matrix element.<br>
+Example:<br>
+
+To rotate a point (x,y) by angle θ:<br>
+
+[ x′  y′ ] = [ cosθ   sinθ ] [x]<br>
+                [ -sinθ  cosθ ] [ y ]<br><br>
+
+Real-World Use:<br><br>
+
+Game development (Unity, Unreal Engine)<br>
+Image editing software (Photoshop, OpenCV)</p>
+            <li>Machine Learning & Data Science</li>
+            <p>Matrix Use:<br>
+
+Training data, weight vectors, and activation functions are all modelled using matrices.<br>
+Fast matrix operations enable vectorized computation, improving performance on large datasets.<br>
+Example:<br><br>
+
+In neural networks, input values and weights are multiplied using matrix multiplication to compute activations:<br>
+
+Output=Input Matrix × Weight Matrix<br>
+
+Real-World Use:<br>
+
+Face recognition, spam detection, recommendation engines</p>
+            <li>Graph Theory and Network Analysis</li>
+            <p>Matrix Use:<br>
+
+Adjacency matrices represent graphs where nodes and edges are stored in a compact matrix form.<br>
+Used to find shortest paths, connectivity, and traversal.<br>
+Example:<br><br>
+
+A graph with 4 nodes:<br><br>
+
+A = [ 0  1  1  0 ]<br>
+      [ 1  0  1  1 ]<br>
+      [ 1  1  0  1 ]<br>
+      [ 0  1  1  0 ]<br><br>
+
+Real-World Use:<br>
+
+Internet routing algorithms, social network analysis, compiler optimization</p>
+            <li>Cryptography and Security</li>
+            <p>Matrix Use:<br>
+
+Matrices are used in encryption algorithms like Hill Cipher.<br>
+The matrix multiplication obscures the message, which can only be decrypted using an inverse matrix.<br>
+Example:<br><br>
+
+Encrypt message using matrix multiplication with a key matrix, then use its inverse for decryption.<br>
+
+ Real-World Use:<br><br>
+
+Secure communication, data protection protocols, blockchain systems</p>
+            <li>Search Engines and Page Ranking</li>
+            <p>Matrix Use:<br>
+
+Google’s PageRank algorithm uses matrices to rank websites based on link structures.<br>
+Represent the web as a huge matrix of probabilities.<br>
+ Example:<br><br>
+
+PageRank models the web as a Markov chain, and the ranking is determined by finding the steady state vector of the transition matrix.</p>
+        </ol>
+        <br>
+        <li>What Is a Matrix?</li>
+        <p>In mathematics, a matrix is a rectangular array of numbers, symbols, or expressions arranged in rows and columns, often enclosed in square or round brackets. Matrices are fundamental to linear algebra and are used to organize and represent large sets of data, solve systems of linear equations, and model various real-world phenomena.</p>
+        <li>Types of Matrices</li>
+        <div>
+        <ol>
+            <li>Classification Based on Shape</li>
+            <ul>
+                <li>Row Matrix = Has only one row (1 × n)</li>
+                <li>Column Matrix = Has only one column (m × 1)</li>
+                <li>Square Matrix = Same number of rows and columns (n × n)</li>
+                <li>Rectangular Matrix = Different number of rows and columns (m ≠ n)</li>
+            </ul>
+            <li>Classification Based on Element Values</li>
+            <ul>
+                <li>Zero Matrix=All elements are zero</li>
+                <li>Diagonal Matrix=Only diagonal elements are non-zero</li>
+                <li>Scalar Matrix=A diagonal matrix with equal diagonal values</li>
+                <li>Identity Matrix=Diagonal matrix with 1s on the diagonal</li>
+            </ul>
+            <li>Classification Based on Symmetry</li>
+             <ul>
+                <li>Symmetric Matrix = Matrix equals its transpose (A = Aᵀ)</li>
+                <li>Skew-Symmetric Matrix = Matrix is the negative of its transpose (A = −Aᵀ)</li>
+             </ul>
+            <li>Classification Based on Structure</li>
+            <ul>
+               <li>Upper Triangular Matrix = All elements below main diagonal are zero</li>
+               <li>Lower Triangular Matrix = All elements above main diagonal are zero</li>
+               <li>Sparse Matrix = Most of the elements are zero (memory efficient)</li>
+               <li>Diagonal Dominant Matrix = Diagonal element > sum of other elements in row</li>
+            </ul>
+        </ol>
+        </div>
+            <li>What is a Determinant?</li>
+        <p>A determinant is a single scalar (numeric) value that can be calculated from the elements of a square matrix (a matrix with the same number of rows and columns). It provides crucial information about the matrix, such as whether it is invertible (non-singular, with a non-zero determinant) or not (singular, with a zero determinant).</p>
+        <li>What is the inverse of a matrix?</li>
+        <p>The inverse of a square matrix A, denoted as A⁻¹, is another matrix such that when A and A⁻¹ are multiplied together, the result is the identity matrix I (i.e., AA⁻¹ = A⁻¹A = I). This is analogous to a number's reciprocal, where a multiplied by 1/a equals 1. An inverse exists only for square matrices with a non-zero determinant, and such a matrix is called invertible.  
+</p>
+<img src="martix 1 photo.jpeg" alt="determinant and inverse of martix" height="400" width="300">
+    </ul>
+    <h2>Gaussian Elimination Method</h2>
+    <ul>
+        <li>What is a Linear Equation?</li>
+        <p>A linear equation is an algebraic equation where the variables are only raised to the first power (degree 1), and each term is either a constant or the product of a constant and a single variable. When graphed, linear equations form straight lines, which is why they are called "linear".  </p>
+        <li>What is Gaussian Elimination?</li>
+        <p>Gaussian elimination is an algorithm that solves systems of linear equations by transforming the system's augmented matrix into an upper triangular form using elementary row operations, and then performing back-substitution to find the variable values. This method uses a series of row operations to create zeros below the leading diagonal, simplifying the system for easier solution.  </p>
+        <li>Practice Questions</li>
+        <img src="martix 1 photo.jpeg" alt="problem 1st page" alt="2st page" height="400" width="300">
+        <img src="gaussian elimination method photo 2.jpeg" alt="2st page" height="400" width="300">
+        <img src="gaussian elimination method photo 3.jpeg" alt="3rd page" height="400" width="300">
+    </ul>
+    <h2>Gauss-Jordan Elimination</h2>
+    <p>Gauss-Jordan elimination is an algorithm that converts a matrix into its reduced row echelon form using elementary row operations to solve systems of linear equations or find the inverse of a matrix. It refines Gaussian elimination by continuing the reduction beyond the upper triangular form to a diagonal form, where each leading 1 has zeros in all other entries in its column, directly yielding the solution.  </p>
+    <ul>
+        <li>What is Gauss–Jordan Elimination method?</li>
+        <p>Gauss-Jordan elimination is an algorithm for solving systems of linear equations and finding matrix inverses by transforming an augmented matrix into reduced row echelon form using elementary row operations. Unlike Gaussian elimination, which uses back-substitution after achieving upper-triangular form, Gauss-Jordan elimination continues the process until the entire matrix (on the left) becomes a diagonal matrix with leading 1s and zeros both above and below them. </p>
+        <li>Steps to perform Gauss–Jordan Elimination:</li>
+        <ol>
+            <li>Write the augmented matrix from the system of equations.</li>
+            <li>Use row operations to get a leading 1 (pivot).</li>
+            <li>Make all other elements zero in the pivot’s column (above and below).</li>
+            <li>Repeat for all variables until you reach Reduced Row Echelon Form.</li>
+            <li>Once in Reduced Row Echelon Form, read the solution directly from the matrix.</li>
+        </ol>
+        <li>System of Equations</li>
+        
+    <h2>Gauss-Jacobi Method</h2>
+    <ul>
+        <li>What is the Gauss-Jacobi Method?</li>
+        <p>The Gauss-Jacobi method, commonly known as the Jacobi method, is an iterative algorithm for finding approximate solutions to a system of linear equations. This technique is particularly useful for solving large systems where direct methods, like Gaussian elimination, are too computationally expensive. The Jacobi method updates all variables simultaneously in each iteration using values calculated in the previous step.</p>
+        <li>Practice questions</li>
+        <img src="gaussian jocobi method photo 1.jpeg" alt="problem 1st page"height="400" width="300">
+        <img src="gaussian jocobi method photo 2.jpeg" alt="2nd page"height="400" width="300">
+    </ul>
+    <h2>Gauss-Seidel Methods</h2>
+    <ul>
+        <li>What is Gauss-Seidel Method?</li>
+        <p>The Gauss-Seidel method is an iterative algorithm used to solve a system of linear equations. It is an improvement upon the Gauss-Jacobi method because it uses the most recent variable approximations as soon as they are calculated, resulting in faster convergence.</p>
+        <li>Practice Questions</li>
+        <img src="gauss seidel method photo 1.jpeg" alt="problem 1st page"height="400" width="300">
+        <img src="gauss seidel method photo 2.jpeg" alt="2nd page"height="400" width="300">
+    </ul>    
+    <h2>Eigenvalues and Eigenvectors</h2>
+    <ul>
+        <li>What are Eigen values and Eigen Vectors?</li>
+        <p>An eigenvector of a square matrix is a non-zero vector that, when multiplied by the matrix, only changes in magnitude, not direction. The scalar factor by which the eigenvector is scaled is called its corresponding eigenvalue. This relationship is one of the most important concepts in linear algebra and is expressed by the equation:\(A\mathbf{x}=\lambda \mathbf{x}\)<br>where<br><ul>
+            <li>A is a square matrix.</li>
+            <li>𝐱 is the eigenvector (a non-zero vector).</li>
+            <li>λ (lambda) is the eigenvalue (a scalar).</li>
+        </ul></p>
+        <li>Practice questions</li>
+        <img src="Eigenvalues and Eigenvectors photo 1.jpeg" alt="problem photo"height="400" width="300">
+    </ul>
+</ul>
+    <h1>Module 2:Sets and Theory</h1>
+    <h2>Set Theory: Basic Concepts and Notations</h2>
+    <ul>
+        <li>What is Set Theory?</li>
+        <p><strong>Set theory is the branch of mathematical logic that studies sets,<br>
+             which are collections of distinct objects called elements</strong></p>
+        <li>What is Set notation?</li>
+        <p><strong>Set notation is a collection of symbols used to define, describe, and operate on mathematical sets, <br>which are collections of distinct objects</strong></p>
+        <li>What Are Subsets, Proper Subsets, and Supersets?</li>
+        <p><strong>A subset (\(A\subseteq B\)) has all its elements within another set (\(B\)), which is then called the superset of \(A\). A proper subset (\(A\subset B\)) is a subset that is not equal to the superset,<br> meaning the superset must contain at least one element not found in the proper subset. </strong></p>
+        <li>What is Set Operation?</li>
+        <p><strong>A set operation is a mathematical action performed on one or more sets to produce a new set, involving combining, comparing, or manipulating elements within those sets.<br> The fundamental set operations are union</strong></p>
+        <li>Now let's proceed to Set Operation</li>
+        <p><strong>Imaging two clubs, the "maths club" and the "science club"</strong></p>
+        <img src="">
+        <ol>
+            <li>Union (∪) (Joining Clubs):</li>
+            <p><strong>The union is like combining both clubs into one big super-club. It includes everyone who is in either the "Math Club" or the "Science Club" (or both).<br> Think of it like merging two different sports teams into one for a special tournament.</strong></p>
+            <li>Intersection (∩) (Overlapping Members):</li>
+            <p><strong>The intersection is like finding the members who are in both the Math Club and the Science Club. It's the overlap between the two clubs.<br> (Shade the overlapping region.) These are the students who excel at both math and science!</strong></p>
+            <li>Complement (' or ᶜ) (Not in the Club):</li>
+            <p><strong>The complement of the "Math Club" (relative to all students in the school) includes all the students who are not in the Math Club. <br>(everything outside the "Math Club" circle.) These are the students who haven't joined the Math Club… yet!</strong></p>
+            <li>Set Difference (A − B) (Removing Members):</li>
+            <p><strong>The set difference is like creating a custom club by removing certain members.<br> If A is the Math Club and B is the Science Club, then A − B is everyone who is in the Math Club but not in the Science Club.
+
+</strong></p>
+        </ol>
+        <li>Why Set Theory matters for CS Engineers?</li>
+        <p><strong>Set theory is crucial for computer science and engineering because it provides a foundational language and framework for organizing, manipulating, and reasoning about data and computational processes. <br>Its principles underpin essential concepts in data structures, databases, and algorithms. </strong></p>
+    </ul>
+    <h2>Types and Operations on Sets</h2>
+    <ul>
+        <li>What are the types of Sets?</li>
+        <ol>
+            <li> Finite Set and Infinite Set</li>
+            <p><strong>A finite set has a countable and limited number of elements, like the days of the week, with a definite cardinality. <br>An infinite set has an unlimited, uncountable number of elements that continues indefinitely, such as the set of natural numbers, with no defined end. </strong></p>
+            <li>Empty Set (∅)</li>
+            <p><strong>n empty set is a unique set containing no elements, also known as a null set or void set</strong></p>
+            <li>Singleton Set</li>
+            <p><strong>A singleton set is a set containing precisely one element. Also known as a unit set, its defining feature is its cardinality, which is always one.<br> Examples include {5}, {apple}, or {2} (the set of even prime numbers), with the curly brackets denoting the set and the content representing the single element within it. </strong></p>
+            <li>Equal Sets (≡)</li>
+            <p><strong>Equal sets are two or more sets that contain the exact same elements, regardless of their order.</strong></p>
+            <li>Equivalent Sets</li>
+            <p><strong>Equivalent sets are two or more sets that have the same number of elements, or the same cardinality, regardless of whether the elements themselves are the same.<br> This concept is often referred to as equinumerosity, and it means a bijection, or one-to-one correspondence, can be established between the elements of the two sets. </strong></p>
+            <li> Universal Set (U)</li>
+            <p><strong>A universal set is the collection of all possible elements or members for a given context, problem, or discussion, and it contains all the related subsets</strong></p>
+            <li>Subset (⊆)</li>
+            <p><strong>a subset is a set containing only elements that are also found in another, larger set.</strong></p>
+            <li>Superset (⊇)</li>
+            <p><strong>A superset is a training technique in fitness that involves performing two different exercises back-to-back with little to no rest in between,<br> followed by a short rest period after the second exercise</strong></p>
+            <li>Proper Subset (⊂)</li>
+            <p><strong>A proper subset is a set that contains only some, but not all, of the elements of another, larger set, which is known as its superset</strong></p>
+            <li>Proper Superset (⊃)</li>
+            <p><strong>proper superset is a set that contains all the elements of another set and also contains at least one additional element that the other set does not have</strong></p>
+            <li>Power Set (P(S))</li>
+            <p><strong>A power set is the set of all possible subsets of a given set, including the empty set and the set itself. </strong></p>
+        </ol>
+        <li>What is Set Cardinality?</li>
+        <p><strong>The cardinality of a set is its "size" or the number of elements it contains, which can be finite or infinite</strong></p>
+        <li>What is Cartesian Product?</li>
+        <p><strong>A Cartesian product of two sets, A and B, is the set of all possible ordered pairs (a, b) where a is from set A and b is from set B, denoted as A × B.</strong></p>
+        <li>Important notes on the Cartesian product</li>
+        <p><strong>The Cartesian product, denoted as \(A\times B\), is the set of all possible ordered pairs \((a,b)\) where \(a\in A\) and \(b\in B\).</strong></p>
+        <li>Cartesian product of n sets</li>
+        <p><strong>The Cartesian product of n sets, also called an n-fold Cartesian product, is the set of all possible ordered n-tuples (c1, c2, ..., cn)<br> where the i-th element ci comes from the i-th set Ci</strong></p>
+        <li>Cartesian Products Beyond Two Sets</li>
+        <p><strong>Cartesian products can be extended to any number of sets, forming n-tuples instead of pairs, where each element of the n-tuple comes from a corresponding set in the sequence.</strong></p>
+    </ul>
+    <h2>Venn diagrams</h2>
+    <ul>
+        <li>What is a Venn diagram?</li>
+        <p><strong> Venn diagram is a visual tool using overlapping circles to show the similarities and differences between related groups or concepts.</strong></p>
+        <img src="set photo from lu.jpeg"height=400 width="300">
+        <li>Venn Diagram Formula</li>
+        <p><strong>The fundamental Venn diagram formula for two sets A and B is n(A ∪ B) = n(A) + n(B) – n(A ∩ B),</strong></p>
+    </ul>
+    <h2>Introduction to Relations and Partial Orders</h2>
+    <ul>
+        <li>What are relations?</li>
+        <ol>
+            <li>Unary Relation</li>
+            <p><strong>A unary relation, also known as a recursive relationship, is a relationship where an entity relates to another entity of the same type.</strong></p>
+            <li>Binary Relation</li>
+            <p><strong>A binary relation is a relationship between two sets, A and B, that can be represented as a set of ordered pairs,<br> where each pair is an element of the Cartesian product of A and B (\(A\times B\)). </strong></p>
+            <li>Ternary Relation</li>
+            <p><strong>A ternary relation is a mathematical or data modeling concept describing a relationship that links three distinct entities simultaneously, rather than just two</strong></p>
+            <li>N-ary Relation</li>
+            <p><strong>An n-ary relation is a generalized concept of a relationship involving n entities or sets, where n is the "degree" of the relation. </strong></p>
+        </ol>
+        <li>What are the properties of relations?</li>
+        <ol>
+            <li>Reflexive</li>
+            <P><strong>A reflexive relation is a binary relation on a set where every element in the set is related to itself</strong></P>
+            <li>Symmetric</li>
+            <p><strong>symmetric function is a mathematical function whose value remains unchanged regardless of the order of its input variables</strong></p>
+            <li>Transitive</li>
+            <p><strong>A transitive function is a specific type of relation where for any three elements \(a\), \(b\), and \(c\) in the domain, if \(f(a)=b\) and \(f(b)=c\),<br> then it must also be true that \(f(a)=c\) and \(f(b)=b\) for the function to be transitive. Essentially, a function \(f\) is transitive if and only if it is the identity function (\(f(x)=x\)). </strong></p>
+        </ol>
+        <li>What are Equivalence Relations?</li>
+        <p><strong>An equivalence relation is a special type of binary relation on a set that groups similar or "equivalent" elements into disjoint sets called equivalence classes. For a relation t</strong></p>
+        <li>What is a Partial order?</li>
+        <p><strong>A partial order is a binary relation on a set where some elements are comparable and others are not</strong></p>
+        <ol>
+            <li>Reflexive</li>
+            <P><strong>A reflexive relation is a binary relation on a set where every element in the set is related to itself</strong></P>
+            <li>Antisymmetric</li>
+            <P><strong>An antisymmetric relation in mathematics is a binary relation on a set where, if two distinct elements are related in both directions, this implies those elements must be identical.</strong></P>
+            <li>Transitive</li> 
+            <P><strong>A transitive function is a specific type of relation where for any three elements \(a\), \(b\), and \(c\) in the domain, if \(f(a)=b\) and \(f(b)=c\),<br> then it must also be true that \(f(a)=c\) and \(f(b)=b\) for the function to be transitive. Essentially, a function \(f\) is transitive if and only if it is the identity function (\(f(x)=x\)). </strong></P>           
+        </ol>
+        <li>What is the Antisymmetric property?</li>
+        <p><strong>The antisymmetric property, or antisymmetric relation, is a property of a relation where if two elements, 'a' and 'b', are related in both directions (i.e., 'a' is related to 'b' AND 'b' is related to 'a'), then 'a' and 'b' must be the same element.</strong></p>
+        <li>How to visualize with a Hasse diagram?</li>
+        <p><strong>To visualize with a Hasse diagram, draw each element of the partially ordered set (poset) as a point, placing smaller elements at the bottom and larger elements at the top.</strong></p>
+        <h2>Understanding Relations and Their Structures</h2>
+        <ul>
+            <li>Let’s revisit the key ideas behind the concept of relations</li>
+            <li>How are graphs represented graphically?</li>
+            <p><strong>Graphs are represented graphically as visual diagrams where entities are shown as nodes (or vertices) and relationships are shown as edges (or lines) connecting these nodes</strong></p>
+            <li>How many relations are possible?</li>
+            <P><strong>The number of possible relations depends on the context, as it can refer to different concepts. In set theory, if a set \(A\) has \(n\) elements, the total number of possible relations on \(A\) is \(2^{n^{2}}\)</strong></P>
+            <li>What are the types of relations?</li>
+            <p><strong>Types of relations include basic relations like the Empty Relation and Universal Relation, and properties of relations such as Reflexive, Symmetric, and Transitive</strong></p>
+            <ol>
+                <li>Reflexive Relation</li>
+                <p><strong>A reflexive relation on a set is a relationship where every element of the set is related to itself</strong></p>
+                <li> Irreflexive Relation</li>
+                <p><strong>An irreflexive relation on a set A is a binary relation where no element in A is related to itself</strong></p>
+                <li> Symmetric Relation</li>
+                <p><strong>A symmetric relation is a binary relation R on a set where, if element a is related to element b (written as aRb), then element b must also be related to element a (written as bRa). <br>A common example is the "is equal to" relation, because if a = b, then it's always true that b = a. </strong></p>
+                <li>Antisymmetric Relation</li>
+                <p><strong>An antisymmetric relation on a set is a binary relation where if two elements \(a\) and \(b\) are related in both directions</strong></p>
+            </ol>
+            <li>What are Equivalence classes?</li>
+            <p><strong>Equivalence classes are subsets of elements from a larger set, where all elements within a given subset are considered equivalent to each other based on a specific equivalence relatio</strong></p>
+            <li>What is an Equivalence Class Here?</li>
+            <img src="">
+            <li>How to find an equivalence class?</li>
+            <img src="">
+            <ol>
+                <li> Identify the equivalence relation on the set</li>
+                <p><strong>An equivalence relation on a set is a binary relation that is reflexive, symmetric, and transitive. To identify an equivalence relation,<br> you must verify that it satisfies these three properties for all elements in the set: </strong></p>
+                <li>Find all elements related to a specific element</li>
+                <img src="">
+                <li>These elements form an equivalence class</li>
+                <img src="">
+            </ol>
+        </ul>
+    </ul>
+</body>
+</html>
