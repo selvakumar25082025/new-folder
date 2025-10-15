@@ -1,69 +1,55 @@
 body{
     background-color: lightcyan;
+    font-family: Arial, sans-serif;
 }
+
 header{
+    background-color: lightseagreen;
     text-align: center;
-    background: skyblue;
-    color:brown;
 }
-footer{
+p{
+    color: cadetblue;
     text-align: center;
-    background-color: grey;
-    color: white;
 }
-    header{
+h1,h2{
+    color : darkblue;
+}
+
+h4{
+    background-color: lightseagreen;
     text-align: center;
-    background: skyblue;
-    color:brown;
 }
-footer{
-    text-align: center;
-    background-color: grey;
-    color: white;
-}
-.container{
-    width: 50%;
-    margin: auto;
-    border: 3px solid black;
-    padding: 10px;
-    background-color: white ;
-}  
-.container1{
+.selva{
     width: 50%;
     margin: auto;
     border: 3px solid black;
     padding: 10px;
     background-color: white ;
 }
-.container2{
+.selva1{
     width: 50%;
     margin: auto;
     border: 3px solid black;
     padding: 10px;
     background-color: white ;
 }
-.container3{
-    width: 50%;
-    margin: auto;
-    border: 3px solid black;
-    padding: 10px;
-    background-color: white ;
-}   
-.container4{
+
+.selva2{
     width: 50%;
     margin: auto;
     border: 3px solid black;
     padding: 10px;
     background-color: white ;
 }
-.container5{
+.selva3{
     width: 50%;
     margin: auto;
     border: 3px solid black;
     padding: 10px;
     background-color: white ;
 }
-.container6{
+
+.selva4{
     width: 50%;
     margin: auto;
     border: 3px solid black;
